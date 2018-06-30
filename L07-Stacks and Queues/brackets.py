@@ -2,7 +2,7 @@
 from collections import deque
 
 
-def solution(S):
+def solution(s: str) -> int:
     """
     >>> solution('{[()()]}')
     1
@@ -11,9 +11,9 @@ def solution(S):
     """
     m = {'{': '}', '[': ']', '(': ')'}
     stack = deque()
-    for s in S:
-        if s in '{[(':
-            stack.append(s)
-        elif m[stack.pop()] != s:
+    for token in s:
+        if token in '{[(':
+            stack.append(token)
+        elif m[stack.pop()] != token:
             return 0
     return 0 if stack else 1

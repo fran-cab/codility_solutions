@@ -1,8 +1,8 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 from collections import Counter
 
 
-def solution(a):
+def solution(a: list) -> int:
     """
     >>> solution([1,2,3] * 14 + [4])
     4
@@ -13,7 +13,7 @@ def solution(a):
     :return:
     """
     c = Counter(a)
-    return next(k for k, v in c.iteritems() if v % 2)
+    return next(k for k, v in c.items() if v % 2)
 
 
 if __name__ == '__main__':

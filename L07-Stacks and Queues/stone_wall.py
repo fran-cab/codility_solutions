@@ -2,7 +2,7 @@
 from collections import deque
 
 
-def solution(H):
+def solution(h: list) -> int:
     """
     >>> solution([3])
     1
@@ -11,7 +11,7 @@ def solution(H):
     """
     stones = 0
     stack = deque([0])
-    for h in H:
+    for h in h:
         while stack[-1] > h:
             stack.pop()
         if stack[-1] < h:

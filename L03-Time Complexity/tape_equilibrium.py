@@ -1,7 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 
-def solution(a):
+def solution(a: list) -> int:
     """
     >>> solution([3, 1, 2, 4, 3])
     1
@@ -9,7 +9,7 @@ def solution(a):
     return min(abs(sum(a[:i]) - sum(a[i:])) for i in range(len(a)))
 
 
-def solution(a):
+def solution(a: list) -> int:
     """
     >>> solution([3, 1, 2, 4, 3])
     1

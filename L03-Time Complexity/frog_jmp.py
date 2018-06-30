@@ -1,7 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 
-def solution(x, y, d):
+def solution(x: int, y: int, d: int) -> int:
     """
     >>> solution(1, 1, 1)
     0

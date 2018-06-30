@@ -2,15 +2,15 @@
 from collections import deque
 
 
-def solution(A, B):
+def solution(a: list, b: list) -> int:
     """
     >>> solution([4, 3, 2, 1, 5], [0, 1, 0, 0, 0])
     2
     """
     u_fishes = deque()
     d_count = 0
-    for size, dir in zip(A, B):
-        if dir == 1:
+    for size, dir_ in zip(a, b):
+        if dir_ == 1:
             u_fishes.append(size)
         else:
             while u_fishes:

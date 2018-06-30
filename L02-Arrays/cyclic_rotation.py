@@ -1,7 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 
-def solution(a, k):
+def solution(a: list, k: int) -> list:
     """
     >>> solution([], 0)
     []
@@ -28,6 +28,6 @@ def solution(a, k):
 if __name__ == '__main__':
     assert solution([], 0) == []
     assert solution([], 1) == []
-    array = [1,2,2,1]
-    for k in xrange(100):
-        assert solution(array, 1) == solution(array, 1 + k * len(array))
+    array = [1, 2, 2, 1]
+    for j in range(100):
+        assert solution(array, 1) == solution(array, 1 + j * len(array))

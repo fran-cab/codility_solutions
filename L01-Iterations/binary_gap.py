@@ -1,7 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 
-def solution(n):
+def solution(n: int) -> int:
     """
     >>> solution(1041)
     5

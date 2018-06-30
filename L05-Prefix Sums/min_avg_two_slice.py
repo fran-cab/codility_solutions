@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 
-def solution(A):
+def solution(a: list) -> int:
     """
     >>> solution([1, 4, 1])
     0
@@ -11,15 +11,15 @@ def solution(A):
     1
     """
     start = 0
-    min = 10001
-    for i in range(len(A)-1):
-       avg = (A[i] + A[i + 1]) / 2
-       if min > avg:
-           min, start = avg, i
-       try:
-           avg = (A[i] + A[i + 1] + A[i + 2]) / 3
-           if min > avg:
-               min, start = avg, i
-       except IndexError:
-           pass
+    min_ = 10001
+    for i in range(len(a) - 1):
+        avg = (a[i] + a[i + 1]) / 2
+        if min_ > avg:
+            min_, start = avg, i
+        try:
+            avg = (a[i] + a[i + 1] + a[i + 2]) / 3
+            if min_ > avg:
+                min_, start = avg, i
+        except IndexError:
+            pass
     return start

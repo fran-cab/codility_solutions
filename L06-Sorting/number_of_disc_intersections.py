@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
-
 import bisect
 
 
-def solution(A):
+def solution(a: list) -> int:
     """
     >>> solution([])
     0
@@ -14,7 +13,7 @@ def solution(A):
     >>> solution([1, 5, 2, 1, 4, 0])
     11
     """
-    borders = [(c - r, c + r) for c, r in enumerate(A)]
+    borders = [(c - r, c + r) for c, r in enumerate(a)]
     borders.sort(key=lambda x: (x[0], -x[1]))
     left_radius = tuple(l for l, _ in borders)
     right_radius = tuple(r for _, r in borders)

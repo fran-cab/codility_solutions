@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 
-def solution(A):
+def solution(a: list) -> int:
     """
     >>> solution([2, 1, 1, 2, 3, 1])
     3
@@ -12,9 +12,9 @@ def solution(A):
     >>> solution([1])
     1
     """
-    if not A:
+    if not a:
         return 0
-    a_sorted = sorted(A)
+    a_sorted = sorted(a)
     count = 1
     for i in range(1, len(a_sorted)):
         if a_sorted[i] != a_sorted[i-1]:

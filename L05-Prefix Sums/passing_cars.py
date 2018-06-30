@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 
-def solution(A):
+def solution(a: list) -> int:
     """
     :return: The number of pairs of passing cars
 
@@ -16,7 +16,7 @@ def solution(A):
     """
     count = 0
     step = 0
-    for num in A:
+    for num in a:
         count = count + step * num
         step = step + 1 - num
     return count

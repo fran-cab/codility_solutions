@@ -1,19 +1,18 @@
 #!/usr/bin/env python3
 import numpy as np
-import array
 
 
-def solution(A):
+def solution(a: list) -> int:
     """
     >>> solution([1,2,3,4])
     1
 
-    :param A:
+    :param a:
     :return:
     """
-    a_size = len(A)
+    a_size = len(a)
     counter = np.zeros(a_size + 1)
-    for num in A:
+    for num in a:
         try:
             counter[num] += 1
         except IndexError:
